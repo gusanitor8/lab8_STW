@@ -27,6 +27,7 @@ const CardContainer = () => {
     const [cardOne, setCardOne] = useState(null);
     const [cardTwo, setCardTwo] = useState(null);
     const [disabled, setDisabled] = useState(false);
+    const [cardsInitialized, setCardsInitialized] = useState(false);
 
 
     const shuffleCards = () => {
@@ -72,10 +73,15 @@ const CardContainer = () => {
         }
     },[cardOne, cardTwo])
 
+    useEffect(()=>{
+        setCardsInitialized(true);
+        shuffleCards();
+    },[])
+
     useEffect(()=>{checkWin()},[cards])
 
     const checkWin = () => {
-        if(cards.every(card=>card.matched)){   
+        if(cardsInitialized && cards.every(card=>card.matched)){   
             alert("You win!");
         }
     }

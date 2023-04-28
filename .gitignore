@@ -3,3 +3,6 @@ node_modules/*
 
 #macOs
 .DS_store
+
+#firebase
+.firebaserc
