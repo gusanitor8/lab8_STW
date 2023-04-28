@@ -5,9 +5,7 @@ import CardContainer from "../components/cardContainer";
 const App = () => {
   return (
     <>       
-      <div className="game-container">        
         <CardContainer/>
-      </div>
     </>
   );
 };
