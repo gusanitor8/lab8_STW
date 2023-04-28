@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 $card-border-color: #cf303f;
 
 @keyframes flip {
@@ -18,9 +19,8 @@ $card-border-color: #cf303f;
   }
 }
 
-h1 {    
-    color: red;    
-    
+body{
+  font-family: 'Press Start 2P', cursive;
 }
  
 .cardContainer{
@@ -43,7 +43,7 @@ h1 {
     transform: rotateY(0deg);
     position: absolute;
     border-radius: 5px;
-    drop-shadow: (0px 0px 5px rgba(0,0,0,0.5));
+    //drop-shadow: (0px 0px 5px rgba(0,0,0,0.5));
     padding: 5px;
     background-color: $card-border-color;
     height: inherit;
@@ -52,13 +52,17 @@ h1 {
 }
 
 .game-container{
-  display: flex;
-  justify-content: center;
+  //display: flex;
+  //justify-content: center;
+  margin: 0auto;
   margin-top: 80px;
-  .grid-container{
 
+  .grid-container{
     display: grid;
     grid-template-columns: repeat(4, 125px);
     grid-template-rows: repeat(4, 125px);
+    margin-right: auto;
+    margin-left: 30%;
   }
+
 }

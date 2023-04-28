@@ -6,8 +6,20 @@ const Card = (props) => {
   const [flipped, setFlipped] = useState(false);
 
   const handleClick = () => {
-    setFlipped(!flipped);
+    if(!flipped){
+      setFlipped(!flipped);
+      props.onClick();
+    }    
+    props.handleChoice(props.img)
   };
+
+  const unflip = () => {
+    if (flipped) {
+      setFlipped(false);
+    }
+  }
+
+
 
   return (
     <>            
